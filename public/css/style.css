@@ -1,0 +1,17 @@
+*{
+    color: white;
+}
+
+
+body{
+    background-color: rgb(44, 44, 44);
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: rgb(100, 100, 100);
+}
+
