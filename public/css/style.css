@@ -27,7 +27,19 @@ img{
     object-position: 0 0;
 }
 
+a{
+    color: white;
+}
+
+a:hover{
+    color: #BBB;
+}
+
 /* **************************************** FORM **************************************** */
+
+form{
+    color:black;
+}
 
 form 
 .custom-file-label::after {
@@ -41,13 +53,6 @@ footer {
     padding-top: 1em;
 }
 
-footer a{
-    color: white;
-}
-
-footer a:hover{
-    color: #BBB;
-}
 
 footer p {
     font-size: 0.75em;
