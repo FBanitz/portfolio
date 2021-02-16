@@ -16,8 +16,11 @@
 
     </head>
     <body>
-        <h1 class="text-center">François BANITZ</h1>
-        <h2 class="text-center">Portfolio</h2>
+        <div class="bg-dark">
+            <h1 class="text-center">François BANITZ</h1>
+            <h2 class="text-center">Portfolio</h2>
+            <hr>
+        </div>
 
         {% for label, messages in app.flashes(['success', 'danger']) %}
         {% for message in messages %}
@@ -36,7 +39,7 @@
                     <div class="dropdown-divider"></div>
                     <ul>
                         <li><a href="{{ path('home') }}">{% trans %}Accueil{% endtrans %}</a></li>
-                        <li><a href="#">{% trans %}Admin{% endtrans %}</a></li>
+                        <li><a href="{{ path('admin') }}">{% trans %}Admin{% endtrans %}</a></li>
                         <li><a href="#">{% trans %}Contact{% endtrans %}</a></li>
                     </ul>
                     <div class="dropdown-divider"></div>

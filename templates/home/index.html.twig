@@ -20,7 +20,7 @@
         {# {% if loop.index <= 6 %} enlevé car on a maintenant la méthode findSix() #} 
             <div class="col-4 p-3">
                 <div class="card bg-dark">
-                    <img src="{{ asset('img/projet/' ~ projet.img) }}" class="card-img-top" alt="Photo {{ projet.nom }}">
+                    <a href="http://{{ projet.lien }}" target="_blank"><img src="{{ asset('img/projet/' ~ projet.img) }}" class="card-img-top" alt="Photo {{ projet.nom }}"></a>
                     <div class="card-body">
                         <h5 class="card-title">{{ projet.nom }}</h5>
                         <p class="card-text">{{ projet.description|u.truncate(75, '...') }}</p>
