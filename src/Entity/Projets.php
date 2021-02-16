@@ -37,6 +37,16 @@ class Projets
      */
     private $lien;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $duree;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $sujet;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +96,30 @@ class Projets
     public function setLien(string $lien): self
     {
         $this->lien = $lien;
+
+        return $this;
+    }
+
+    public function getDuree(): ?int
+    {
+        return $this->duree;
+    }
+
+    public function setDuree(?int $duree): self
+    {
+        $this->duree = $duree;
+
+        return $this;
+    }
+
+    public function getSujet(): ?string
+    {
+        return $this->sujet;
+    }
+
+    public function setSujet(?string $sujet): self
+    {
+        $this->sujet = $sujet;
 
         return $this;
     }

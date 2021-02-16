@@ -1,0 +1,43 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}projet - formulaire{% endblock title %}
+
+{% block body %}
+
+    <h2 class="pb-5">Formulaire - projet</h2>
+
+    {{ form_start(projetForm) }}
+
+        <div class="row">
+
+            <div class="col-12 my-3">
+                {{ form_label(projetForm.nom) }}
+                {{ form_widget(projetForm.nom) }}
+            </div>
+            
+            <div class="col-12 my-3">
+                {{ form_label(projetForm.description) }}
+                {{ form_widget(projetForm.description) }}
+            </div>
+
+            
+            <div class="col-12 my-3">
+                {{ form_label(projetForm.img) }}
+                {{ form_widget(projetForm.img) }}
+                {{ form_help(projetForm.img) }}
+            </div>
+            
+            <div class="col-12 my-3">
+                {{ form_label(projetForm.lien ) }}
+                {{ form_widget(projetForm.lien ) }}
+            </div>
+
+            <div class="col-12 text-right">
+                {{ form_widget(projetForm.valider )}}
+            </div>
+
+        </div>
+
+    {{ form_end(projetForm) }}
+
+{% endblock %}
