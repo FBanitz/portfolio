@@ -8,35 +8,45 @@
 
     {{ form_start(projetForm) }}
 
-        <div class="row">
-
-            <div class="col-12 my-3">
-                {{ form_label(projetForm.nom) }}
-                {{ form_widget(projetForm.nom) }}
-            </div>
-            
-            <div class="col-12 my-3">
-                {{ form_label(projetForm.description) }}
-                {{ form_widget(projetForm.description) }}
-            </div>
-
-            
-            <div class="col-12 my-3">
-                {{ form_label(projetForm.img) }}
-                {{ form_widget(projetForm.img) }}
-                {{ form_help(projetForm.img) }}
-            </div>
-            
-            <div class="col-12 my-3">
-                {{ form_label(projetForm.lien ) }}
-                {{ form_widget(projetForm.lien ) }}
-            </div>
-
-            <div class="col-12 text-right">
-                {{ form_widget(projetForm.valider )}}
-            </div>
-
+        <div class="col-4 my-3">
+            {{ form_label(projetForm.nom) }}
+            {{ form_widget(projetForm.nom) }}
         </div>
+        
+        <div class="col-12 my-3">
+            {{ form_label(projetForm.description) }}
+            {{ form_widget(projetForm.description) }}
+        </div>
+
+        <div class="col-4 my-3">
+            {{ form_label(projetForm.img) }}
+            {{ form_widget(projetForm.img) }}
+            {{ form_help(projetForm.img) }}
+        </div>
+        
+        <div class="col-6 my-3">
+            {{ form_label(projetForm.lien ) }}
+            {{ form_widget(projetForm.lien ) }}
+            {{ form_help(projetForm.lien) }}
+        </div>
+
+        <div class="col-2 my-3">
+            {{ form_label(projetForm.duree) }}
+            {{ form_widget(projetForm.duree) }}
+            {{ form_help(projetForm.duree) }}
+        </div>
+
+        <div class="col-6 my-3">
+            {{ form_label(projetForm.sujet) }}
+            {{ form_widget(projetForm.sujet) }}
+            {{ form_help(projetForm.sujet) }}
+        </div>
+        
+        <div class="text-right">
+            <a href="{{ path('admin_projets') }}" class="btn btn-outline-light">Retour</a> 
+            {{ form_widget(projetForm.valider )}}
+        </div>
+
 
     {{ form_end(projetForm) }}
 

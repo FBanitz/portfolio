@@ -24,11 +24,15 @@
                         <h5 class="card-title">{{ projet.nom }}</h5>
                         <p class="card-text">{{ projet.description}}</p>
                         {% if projet.duree is not null %} <p class="card-text">Projet effectué en {{ projet.duree }} heures</p> {% endif %}
-                        {% if projet.sujet is not null %} <p class="card-text"><a href="http://{{ projet.sujet }}" target="_blank">Sujet</a></p> {% endif %}
-
+                        
                     </div>
                     <div class="card-body text-center">
-                        <a href="http://{{ projet.lien }}" target="_blank" class="btn btn-outline-primary col-12">Voir le site</a>
+                        {% if projet.sujet is not null %} 
+                        <a href="http://{{ projet.sujet }}" target="_blank" class="btn btn-outline-light">Sujet</a> 
+                        <a href="http://{{ projet.lien }}" target="_blank" class="btn btn-light col-10">Voir le site</a>
+                        {% else %}
+                        <a href="http://{{ projet.lien }}" target="_blank" class="btn btn-light col-12">Voir le site</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

@@ -14,7 +14,9 @@
             <th>Description</th>
             <th>Lien</th>
             <th>Image</th>
-            {# <th>Actions</th> #}
+            <th>Durée de production</th>
+            <th>Lien du sujet</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -22,13 +24,15 @@
             <tr>
                 <td class="align-middle">{{ loop.index }}</td>
                 <td class="align-middle">{{ projet.nom }}</td>
-                <td class="align-middle">{{ projet.description|u.truncate(75, '...')  }}</td>
-                <td class="align-middle">{{ projet.lien|u.truncate(75, '...')  }}</td>
+                <td class="align-middle">{{ projet.description|u.truncate(75, '[...]') }}</td>
+                <td class="align-middle">{{ projet.lien }}</td>
                 <td class="align-middle"><img src="{{ asset('img/projet/') ~ projet.img }}" alt="photo {{ projet.nom }}"></td>
-                {# <td class="align-middle">
+                <td class="align-middle">{{ projet.duree }}{% if projet.duree is not null %} heures{% endif %}</td>
+                <td class="align-middle">{{ projet.sujet }}</td>
+                <td class="align-middle">
                     <a href="{{ path('projet_update', {'id':projet.id}) }}"><i class="fas fa-pen-square"></i></a> | 
                     <a href="{{ path('projet_delete', {'id':projet.id}) }}"><i class="fas fa-trash-alt"></i></a>
-                </td> #}
+                </td>
             </tr>
         {% endfor %}
     </tbody>

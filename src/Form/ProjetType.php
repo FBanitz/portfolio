@@ -36,14 +36,28 @@ class ProjetType extends AbstractType
                 'mapped' => false,
                 'label' => 'Image',
                 'attr' => [
-                    'placeholder' => 'photo principale'
+                    'placeholder' => 'Image d\'illustration'
                 ]
             ])
             ->add('lien', TextType::class, [
-                'help' => 'lien sans le http(s) ni le www',
+                'help' => 'lien sans http(s):// ni www.',
                 'required' => true,
                 'attr' => [
                     'placeholder' => 'Ex.: monsite.fr'
+                ]
+            ])
+            ->add('duree', IntegerType::class, [
+                'help' => 'durée de production en heures',
+                'required' => false,
+                'attr' => [
+                    'placeholder' => '4'
+                ]
+            ])
+            ->add('sujet', TextType::class, [
+                'help' => 'lien du sujet sans http(s):// ni www.',
+                'required' => false,
+                'attr' => [
+                    'placeholder' => 'Ex.: monsite.fr/sujet.pdf'
                 ]
             ])
             ->add('valider', SubmitType::class, ['label' => 'Valider'])
