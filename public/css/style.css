@@ -1,10 +1,44 @@
-*{
+
+/* **************************************** RESET **************************************** */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: lighter;
     color: white;
 }
 
+/* **************************************** GLOBAL **************************************** */
 
-body{
+body {
+    margin-bottom: 50px;
     background-color: rgb(44, 44, 44);
+}
+
+hr{
+    color:white;
+}
+
+img{
+    max-height: 13rem;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+/* **************************************** FORM **************************************** */
+
+form 
+.custom-file-label::after {
+    content: 'Parcourir';
+}
+
+/* **************************************** FOOTER **************************************** */
+
+footer {
+    bottom: 0;
+    padding-top: 1em;
 }
 
 footer a{
@@ -12,6 +46,9 @@ footer a{
 }
 
 footer a:hover{
-    color: rgb(100, 100, 100);
+    color: #BBB;
 }
 
+footer p {
+    font-size: 0.75em;
+}
